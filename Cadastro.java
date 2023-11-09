@@ -19,7 +19,6 @@ public class Cadastro
                 throw new IllegalArgumentException();
             }
         } catch(IllegalArgumentException e) {
-            e.getMessage();
             e.printStackTrace();
         }
 
@@ -42,15 +41,8 @@ public class Cadastro
     // Adiciona um objeto no array
     public void insere(Professor p)
     {
-        try{
-            if(!(p instanceof Professor))
-                throw new IllegalArgumentException();
-            this.array.add(p);
-        }catch(IllegalArgumentException e)
-        {
-            e.getMessage();
-            e.printStackTrace();
-        }
+        array.add(p);
+        System.out.println("Professor cadastrado!");
     }
     
      // Adiciona um objeto numa posição específica do array
